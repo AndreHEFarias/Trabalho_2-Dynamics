@@ -48,7 +48,7 @@ namespace Dynacoop2023.AlfaPeople.MyFirstPlugins
         private Entity UpdateAccount(bool? incrementOrDecrement, EntityReference accountReference)
         {
             ContaController contaController = new ContaController(this.Service);
-            Entity oppAccount = contaController.GetAccountById(accountReference.Id, new string[] { "dcp_nmr_total_opp" });
+            Entity oppAccount = contaController.GetAccountById(accountReference.Id, new string[] { "dcp_numero_total_opp" });
             contaController.IncrementOrDecrementNumberOfOpp(oppAccount, incrementOrDecrement);
             return oppAccount;
         }
